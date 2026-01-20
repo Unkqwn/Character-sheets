@@ -4,21 +4,25 @@ from pathlib import Path
 presetFolder = Path(__file__).resolve().parent / "Presets"
 preset = None
 
-def CheckFolder():
-    if presetFolder == None:
-        print("No folder found, please check if you downloaded the presets along with this code.")
-    else:
-        if CheckForFiles(presetFolder):
-            return True
-        else:
-            print("No files were found, please check if you downloaded the files in the folder.")
-    return False
-
-def CheckForFiles(folder):
+def GetFiles(folder: Path):
+    """Returns files within a given folder."""
     files = [f for f in folder.iterdir() if f.is_file()]
     return files
 
+def CheckFolder():
+    if not presetFolder.exists():
+        print("No folder found. Please check if you downloaded the presets along with this code.")
+        return False
+    
+    files = GetFiles(presetFolder)
+    if not files:
+        print("No files were found in the folder. Please check if you downloaded the files along with the folder.")
+        return False
+    
+    return True
+
 def ChoosePreset():
+    """Placeholder for when I'll let the user select the preset."""
     return
 
 def Main():
