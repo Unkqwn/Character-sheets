@@ -1,0 +1,10 @@
+{
+    "welcome": "Welkom bij mijn character sheet manager.",
+
+    "availablePresets": "Dit zijn de momenteel beschikbare presets:",
+    "choice": "Maak een keuze. (moet numeriek zijn)",
+    "invalidChoice": "Ongeldige keuze. Probeer opnieuw.",
+
+    "noFolder": "Geen map gevonden. Controleer of je de presets hebt gedownload.",
+    "noFiles": "Geen bestanden gevonden in de map."
+}

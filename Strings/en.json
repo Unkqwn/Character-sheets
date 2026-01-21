@@ -1,0 +1,10 @@
+{
+    "welcome": "Welcome to my character sheet manager.",
+    
+    "availablePresets": "These are the currently available presets:",
+    "choice": "Please make a choice. (must be numerical)",
+    "invalidChoice": "invalid choice. Please try again.",
+
+    "noFolder": "No folder found. Please check if you downloaded the presets along with this code.",
+    "noFiles": "No files were found in the folder."
+}
