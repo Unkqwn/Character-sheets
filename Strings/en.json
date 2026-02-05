@@ -1,10 +1,43 @@
 {
-    "welcome": "Welcome to my character sheet manager.",
+    "welcome": "Welcome to my Character Sheet Manager",
     
-    "availablePresets": "These are the currently available presets:",
-    "choice": "Please make a choice. (must be numerical)",
-    "invalidChoice": "invalid choice. Please try again.",
+
+    
+    "availablePresets": "These are the currently available Presets:",
+
+    "choose": "Please make a choice (must be numerical): ",
+
+    "currentScore": "Preset score: ",
+
+    "invalidChoice": "Invalid choice. Please try again.",
 
     "noFolder": "No folder found. Please check if you downloaded the presets along with this code.",
-    "noFiles": "No files were found in the folder."
+
+    "noFiles": "No files were found in the folder.",
+
+    "noFilename": "No filename provided. Character sheet not created.",
+
+    "modifyAbilityScores": "Modify Ability Scores (press Enter to skip):",
+
+    "separator": "════════════════════════════════════════",
+
+    "enterNewScore": "Enter new score (1-20) or press Enter to keep {current}: ",
+
+    "scoreSet": "{ability} set to {score} (modifier: {modifier:+d})",
+
+    "invalidScoreRange": "Invalid input. Please enter a number between 1 and 20.",
+
+    "invalidScoreSyntax": "Invalid input. Please enter a valid number.",
+
+    "loadedPreset": "Loaded preset: {preset}",
+
+    "characterSheetName": "Enter a name for the new character sheet: ",
+
+    "filenameExists": "'{filename}.json' already exists. Overwrite? (yes/no): ",
+
+    "fileNotSaved": "File not saved.",
+
+    "fileSaved": "Character sheet saved as '{filename}.json'",
+
+    "errorSaving": "Error saving file: {error}"
 }

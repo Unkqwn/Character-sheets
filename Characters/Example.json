@@ -1,0 +1,28 @@
+{
+    "Ability": {
+        "Strength": {
+            "score": 20,
+            "modifier": 5
+        },
+        "Dexterity": {
+            "score": 5,
+            "modifier": -3
+        },
+        "Constitution": {
+            "score": 16,
+            "modifier": 3
+        },
+        "Intelligence": {
+            "score": 13,
+            "modifier": 1
+        },
+        "Wisdom": {
+            "score": 14,
+            "modifier": 2
+        },
+        "Charisma": {
+            "score": 7,
+            "modifier": -2
+        }
+    }
+}
