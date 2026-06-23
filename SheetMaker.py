@@ -17,17 +17,17 @@ preset = None
 
 characterFolder = Path(__file__).resolve().parent / "Characters"
 
-def GetFiles(folder: Path):
+def GetCharacterFiles(folder: Path):
     """Returns files within a given folder."""
     files = [f for f in folder.iterdir() if f.is_file()]
     return files
 
-def CheckFolder(folder):
+def CheckFolder(folder = presetFolder):
     if not folder.exists():
         print(text["noFolder"])
         return None
     
-    files = GetFiles(folder)
+    files = GetCharacterFiles(folder)
     if not files:
         print(text["noFiles"])
         return None
@@ -39,16 +39,9 @@ def LoadFile(file: Path):
     with file.open(encoding="utf-8") as f:
         return json.load(f)
 
-def ChoosePreset(presets: list[Path]):
+def GetPresets(presets: list[Path]):
     """Display available presets and get user selection."""
-    print(text["availablePresets"])
-
-    for index, preset_file in enumerate(presets, start = 1):
-        print(f"{index}. {preset_file.stem}")
-
-    choice = input(text["choose"]).strip()
-
-    return choice
+    return presets
 
 def HandleChoice(choice, presets: list[Path]):
     if not choice.isdigit():
@@ -129,30 +122,10 @@ def CreateSheet(preset_file: Path):
     filename = input(text["characterSheetName"]).strip()
     
     if not filename:
-        print(text["noFilename"]).strip()
-    
-    if not filename:
-        print("No filename provided. Character sheet not created.")
+        print(text["noFilename"])
         return
     
     SaveNewSheet(sheet_data, filename)
 
 def CalculateModifier(score: int) -> int:
     return (score - 10) // 2
-
-def Main():
-    print(text["welcome"])
-
-    presets = CheckFolder(presetFolder)
-    if not presets:
-        return
-
-    preset = HandleChoice(ChoosePreset(presets), presets)
-    if not preset:
-        return
-
-    CreateSheet(preset)
-    return
-
-if __name__ == "__main__":
-    Main()
